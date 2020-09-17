@@ -37,9 +37,9 @@ do
 	printf -v id "%0${digits_num}d" "$current_val"
 	if [ ${image: -4} == ".gif" ]
 	then
-		magick convert ${in_dir}${image} ${out_dir}"/tmp/"${image}.jpg
+		magick convert ${in_dir}${image} ${out_dir}"/tmp/"${image}.jpeg
 	else
-		magick convert ${in_dir}${image} ${out_dir}$(date +"%Y-%m-%d-%H-%M-%S")-${id}.jpg
+		magick convert ${in_dir}${image} ${out_dir}$(date +"%Y-%m-%d-%H-%M-%S")-${id}.jpeg
 		current_val=$(($current_val+1))
 	fi
 done
